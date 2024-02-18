@@ -32,6 +32,7 @@ const specs = swaggerJsdoc(options);
 
 app.use('/docs',swaggerUi.serve,swaggerUi.setup(specs));
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
